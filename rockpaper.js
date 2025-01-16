@@ -52,7 +52,7 @@ const play=(ch)=>{
         dr.innerText=d;
         draw();
         msg2.classList.remove("visi");
-        msg2.innerText=` both chose ${c}`;
+        msg2.innerText=`note: both chose ${c}`;
         return;   
     }
     if(pwin(ch,c)){
@@ -61,7 +61,7 @@ const play=(ch)=>{
         console.log("player won!");
         msg.innerText=`you won!`;
         msg2.classList.remove("visi");
-        msg2.innerText=` you chose ${ch}, computer chose ${c}`;
+        msg2.innerText=`note: you chose ${ch}, computer chose ${c}`;
         
     }else if(pwin(ch,c)===false){
         scorec++;
@@ -70,7 +70,7 @@ const play=(ch)=>{
 
         msg.innerText=`computer won! you lost!`;
         msg2.classList.remove("visi");
-        msg2.innerText=` you chose ${ch}, computer chose ${c}`;
+        msg2.innerText=`note: you chose ${ch}, computer chose ${c}`;
     }
     times.innerText=scorec+scorep+d;
 
@@ -84,6 +84,4 @@ img.forEach((i)=>{
     });
 
 })
-
-
 
