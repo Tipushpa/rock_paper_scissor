@@ -1,7 +1,9 @@
 let user = document.querySelector("#users");
 let comp = document.querySelector("#comps");
 const img=document.querySelectorAll(".img");
+
 let msg= document.querySelector("#msg");
+let msg2= document.querySelector("#msg2");
 let dr = document.querySelector("#draw");
 let times=document.querySelector("#times");
 
@@ -15,6 +17,7 @@ const gencomp=()=>{
 
 const draw=()=>{
     console.log("draw");
+    msg.innerText=`draw!!!!`;
 }
 const pwin=(player, computer)=>{
     let a
@@ -42,23 +45,32 @@ const play=(ch)=>{
     //computer
     const c= gencomp();
     console.log("comp is",  c);
+    
 
     if(ch===c){
         d++;
         dr.innerText=d;
-        draw();   
+        draw();
+        msg2.classList.remove("visi");
+        msg2.innerText=` both chose ${c}`;
+        return;   
     }
     if(pwin(ch,c)){
         scorep++;
         user.innerText=scorep;
         console.log("player won!");
-        msg.innerText="you won!";
+        msg.innerText=`you won!`;
+        msg2.classList.remove("visi");
+        msg2.innerText=` you chose ${ch}, computer chose ${c}`;
         
     }else if(pwin(ch,c)===false){
         scorec++;
         comp.innerText=scorec;
         console.log("comp wins");
-        msg.innerText="computer won, you lose!";
+
+        msg.innerText=`computer won! you lost!`;
+        msg2.classList.remove("visi");
+        msg2.innerText=` you chose ${ch}, computer chose ${c}`;
     }
     times.innerText=scorec+scorep+d;
 
@@ -72,4 +84,6 @@ img.forEach((i)=>{
     });
 
 })
+
+
 
