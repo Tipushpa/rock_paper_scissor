@@ -74,7 +74,7 @@
     font-size: 2vw; /* Font size scales with viewport width */
     line-height: center;
     color: white;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 .visi{
     visibility: hidden;
@@ -87,7 +87,7 @@
 }
 
 .time {
-    margin-top: 1rem;
+    margin-top: 4rem;
     position: absolute;
     right: 5%; /* Move to the right */
     top: 10%;
@@ -95,7 +95,7 @@
     width: 10vw;
     background-color: #e9484b;
     border-radius: 12px;
-    font-size: 1em;
+    font-size: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
