@@ -1,69 +1,155 @@
-*{
+
+* {
     text-align: center;
     margin: 0;
     padding: 0;
-  
 }
-#head{
+
+#head {
     background-color: #a34e04;
-    height: 90px;
-    font-size: 60px;
+    height: 10vh; /* Adjusts based on viewport height */
+    font-size: 6vw; /* Font size adjusts based on viewport width */
     color: white;
-    line-height: 90px;
+    line-height: 10vh; /* Vertically center the text */
 }
-.game{
+
+.game {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    
-    transition-timing-function: transform 0 ease-in-out;
+    flex-wrap: wrap; /* Allows wrapping of items on smaller screens */
+    margin-top: 2rem;
+    width: 100%; /* Ensures the game container is responsive */
 }
-.imgc{
+
+.imgc {
     border-radius: 50%;
 }
-.img{
+
+.img {
     clip-path: circle(45% at center);
-    transition-timing-function: transform 0 ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 20vw; /* Sets the image size relative to viewport width */
+    max-width: 120px; /* Max size to prevent excessive scaling */
 }
-.imgc:hover{
-    cursor:pointer; 
-    opacity: 0.7;  
-    transform:scale(1.1);
+
+.imgc:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: scale(1.1);
     background-color: black;
 }
-.scoreb{
-    
+
+.scoreb {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    
+    width: 100%;
 }
-.score{
-    font-size: 30px;   
+
+.score {
+    font-size: 2em; /* Relative font size for responsiveness */
 }
-.msg{
-    font-size: 25px;
+
+.msg {
+    font-size: 2vw; /* Font size scales with viewport width */
     line-height: center;
     color: white;
     margin-top: 2rem;
 }
-#msg{
+
+#msg {
     background-color: #cf191c;
     display: inline;
     padding: 1rem;
     border-radius: 1rem;
 }
-.time{
+
+.time {
     margin-top: 1rem;
-    margin-left: 90%;
-    height: 3rem;
-    width: 6rem;
+    position: absolute;
+    right: 5%; /* Move to the right */
+    top: 10%;
+    height: 5vh;
+    width: 10vw;
     background-color: #e9484b;
     border-radius: 1rem;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    #head {
+        font-size: 8vw; /* Larger font size on tablets */
+        height: 15vh;
+    }
+
+    .game {
+        gap: 3rem; /* Reduce gap between images */
+    }
+
+    .img {
+        width: 25vw; /* Larger images on smaller screens */
+        max-width: 100px;
+    }
+
+    .scoreb {
+        gap: 2rem; /* Reduce gap between score elements */
+    }
+
+    .score {
+        font-size: 1.5em; /* Smaller font size on tablets */
+    }
+
+    .msg {
+        font-size: 3vw; /* Adjust message size for smaller screens */
+    }
+
+    .time {
+        right: 10%;
+        width: 12vw;
+        height: 6vh;
+    }
+}
+
+@media (max-width: 480px) {
+    #head {
+        font-size: 10vw; /* Larger font size on mobile */
+        height: 20vh;
+    }
+
+    .game {
+        gap: 1.5rem; /* Reduce gap between images */
+    }
+
+    .img {
+        width: 30vw; /* Adjust image size for smaller screens */
+        max-width: 80px;
+    }
+
+    .scoreb {
+        gap: 1.5rem; /* Further reduce gap on mobile */
+    }
+
+    .score {
+        font-size: 1.2em; /* Smaller font size on mobile */
+    }
+
+    .msg {
+        font-size: 4vw; /* Adjust message size on mobile */
+    }
+
+    .time {
+        right: 5%;
+        width: 15vw;
+        height: 8vh;
+    }
 }
