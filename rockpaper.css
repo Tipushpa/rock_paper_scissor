@@ -169,7 +169,7 @@
     .time {
       margin-top: 5rem;
         right: 5%;
-        width: 20vw;
+        width: fit-content;
         height: 5vh;
     }
 }
