@@ -167,8 +167,9 @@
     }
 
     .time {
+      margin-top: 5rem;
         right: 5%;
         width: 15vw;
-        height: 8vh;
+        height: 5vh;
     }
 }
