@@ -19,7 +19,7 @@
     align-items: center;
     gap: 5rem;
     flex-wrap: wrap; /* Allows wrapping of items on smaller screens */
-    margin-top: 2rem;
+    margin-top: 5rem;
     width: 100%; /* Ensures the game container is responsive */
 }
 
@@ -73,14 +73,14 @@
 .msg2 {
     font-size: 2vw; /* Font size scales with viewport width */
     line-height: center;
-    color: white;
-    margin-top: 3rem;
+    color: rgb(92, 86, 86);
+    margin-top: 5rem;
 }
 .visi{
     visibility: hidden;
 }
 #msg2 {
-    background-color: #cf191c;
+    border: #333131;
     display: inline;
     padding: 1rem;
     border-radius: 1rem;
@@ -127,10 +127,14 @@
     .msg {
         font-size: 3vw; /* Adjust message size for smaller screens */
     }
+    .msg2 {
+        font-size: 3vw; /* Adjust message size for smaller screens */
+    }
+    
 
     .time {
         right: 10%;
-        width: 12vw;
+        width: 15vw;
         height: 6vh;
     }
 }
