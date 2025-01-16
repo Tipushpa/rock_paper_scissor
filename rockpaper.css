@@ -70,17 +70,32 @@
     padding: 1rem;
     border-radius: 1rem;
 }
+.msg2 {
+    font-size: 2vw; /* Font size scales with viewport width */
+    line-height: center;
+    color: white;
+    margin-top: 2rem;
+}
+.visi{
+    visibility: hidden;
+}
+#msg2 {
+    background-color: #cf191c;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+}
 
 .time {
     margin-top: 1rem;
     position: absolute;
     right: 5%; /* Move to the right */
     top: 10%;
-    height: 5vh;
+    height: fit-content;
     width: 10vw;
     background-color: #e9484b;
-    border-radius: 1rem;
-    font-size: 1.5em;
+    border-radius: 12px;
+    font-size: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
